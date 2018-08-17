@@ -6,7 +6,7 @@
 #    By: abaurens <abaurens@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/08/16 11:58:20 by abaurens          #+#    #+#              #
-#    Updated: 2018/08/16 23:32:15 by abaurens         ###   ########.fr        #
+#    Updated: 2018/08/17 02:20:17 by abaurens         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ clean:
 	$(RM) $(OBJ)
 
 fclean:	clean
-	$(RM) $(NAME)
+	$(RM) $(NAME) vgcore.*
 
 re:	fclean all
 
