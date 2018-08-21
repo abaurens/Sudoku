@@ -6,18 +6,19 @@
 #    By: abaurens <abaurens@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/08/16 11:58:20 by abaurens          #+#    #+#              #
-#    Updated: 2018/08/17 02:20:17 by abaurens         ###   ########.fr        #
+#    Updated: 2018/08/21 02:24:42 by abaurens         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	sudoku
 
-SRC			=	main.c			\
-				sudoku.c		\
-				display.c		\
-				parsing.c		\
-				string_c.c		\
-				adv_sudoku.c
+SRC			=	main.c					\
+				sudoku.c				\
+				display.c				\
+				parsing.c				\
+				string_c.c				\
+				inclusive_conduction.c	\
+				exclusive_conduction.c
 
 OBJ			=	$(SRC:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: abaurens <abaurens@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/16 11:58:17 by abaurens          #+#    #+#             */
-/*   Updated: 2018/08/17 02:10:04 by abaurens         ###   ########.fr       */
+/*   Updated: 2018/08/21 04:04:59 by abaurens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,13 @@ int				main(int ac, char **av)
 
 	if (!check_args(ac, av, &sudoku))
 		return (1);
+	inclusive_reduction(&sudoku);
+	debug_display(&sudoku);
 	reduce_possibilities(&sudoku);
-	display_sudoku(&sudoku);
+	debug_display(&sudoku);
 	reduce_possibilities(&sudoku);
-	display_sudoku(&sudoku);
+	debug_display(&sudoku);
+	reduce_possibilities(&sudoku);
+	debug_display(&sudoku);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: abaurens <abaurens@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/16 13:28:28 by abaurens          #+#    #+#             */
-/*   Updated: 2018/08/17 01:07:04 by abaurens         ###   ########.fr       */
+/*   Updated: 2018/08/21 02:24:21 by abaurens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,18 +65,26 @@ char	contains(const char * const str, char c);
 */
 void	putnbr_bin(unsigned int nb, unsigned int len, int color);
 void	display_sudoku(t_sudoku *sudoku);
+void	debug_display(t_sudoku *sudoku);
 
 /*
-** adv_sudoku,c
+** exclusive_conduction.c
 */
-void	adv_reduce_lines_possibilities(t_sudoku *sudoku);
+/*void	adv_reduce_lines_possibilities(t_sudoku *sudoku);
 void	adv_reduce_columns_possibilities(t_sudoku *sudoku);
-void	adv_reduce_squares_possibilities(t_sudoku *sudoku);
+void	adv_reduce_squares_possibilities(t_sudoku *sudoku);*/
+void	exclusive_reduction(t_sudoku *sudoku);
+
+/*
+** inclusive_conduction.c
+*/
+void	inclusive_reduction(t_sudoku *sudoku);
 
 /*
 ** sudoku.c
 */
-void	simple_reduction(t_sudoku *sudoku);
+int		get_cell_value(t_cell *cell);
+int		count_cell_possibilities(t_cell *cell);
 void	reduce_possibilities(t_sudoku *sudoku);
 
 #endif
